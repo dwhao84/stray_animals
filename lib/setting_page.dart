@@ -14,7 +14,14 @@ class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Settings')),
+      appBar: AppBar(
+        title: const Text('Settings'),
+        titleTextStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 20.0),
+        centerTitle: true,
+        forceMaterialTransparency: false,
+        backgroundColor: const Color.fromARGB(255, 47, 108, 79),
+        foregroundColor: Colors.white,
+      ),
       body: ListView.separated(
         itemCount: settings.length,
         separatorBuilder: (context, index) => const Divider(),
